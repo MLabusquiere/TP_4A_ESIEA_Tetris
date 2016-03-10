@@ -119,3 +119,29 @@ https://maven.apache.org/plugins/maven-shade-plugin/
             </plugin>
 
 ```
+
+Framework pour les test  : 
+
+> Ajouter dans le pom.xml
+```
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+            <version>1.9.5</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.2.0</version>
+            <scope>test</scope>
+        </dependency>
+```
+- Nous vous invitons fortement à utiliser junit et vous pouvez vous aider des deux autres dépendances pour effectuer vos tests
+- le scope test permet au shade plugin de pas embarquer vos dépendance pour tester qui ne sont pas nécessaire quand votre tetris tournera
