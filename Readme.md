@@ -61,8 +61,10 @@ Un readme.md à la racine du repository est attendu contenant :
 - cours-esiea[at]xgouchet[dot]fr
 
 ## Liens Utiles
+- Real time input reader :
 http://www.source-code.biz/snippets/java/RawConsoleInput/
-Ajouter la dépendance suivante dans le pom :
+
+> Ajouter la dépendance suivante dans le pom :
 ```
         <dependency>
             <groupId>net.java.dev.jna</groupId>
@@ -71,7 +73,7 @@ Ajouter la dépendance suivante dans le pom :
         </dependency>
 ```
 
-Exemple d'utilisation
+> Exemple d'utilisation
 ```
     public Collection<Character> getInput() {
         try {
@@ -90,10 +92,10 @@ Exemple d'utilisation
 
 Attention la classe RawConsoleInput marche mal dans les consoles Eclipse/IntelliJ
 
-
-> Fat Jar (Met les dépendance dans la jar) et Main par defaut : 
+- Fat Jar (Met les dépendance dans la jar) et Main par defaut : 
 https://maven.apache.org/plugins/maven-shade-plugin/
-Dans le pom.xml de votre projet :
+
+> Dans le pom.xml de votre projet :
 ```
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
