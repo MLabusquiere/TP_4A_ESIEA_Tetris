@@ -43,8 +43,9 @@ A priori 50 % TP - 50 % partiel
 
 
 ## Pour rendre son travail :
-Le travail est à rendre pour le _30 Mars 2016_
-Il faut envoyer un mail au contacts ci dessous avec le nom de votre binome/trinome et l'adresse github de votre projet
+- Le travail est à rendre pour le _30 Mars 2016_ .
+- Une extension de temps est ajoutée pour les CFA. Ils pourrons rendre leur TP, le 14 Avril.
+- Il faut envoyer un mail au contacts ci dessous avec le nom de votre binome/trinome et l'adresse github de votre projet
 
 >Utiliser la plateforme github.com (cf : https://guides.github.com/activities/hello-world/) ou bitbucket.org pour rendre le code source
 Un readme.md à la racine du repository est attendu contenant :
@@ -61,3 +62,21 @@ Un readme.md à la racine du repository est attendu contenant :
 
 ## Liens Utiles
 http://www.source-code.biz/snippets/java/RawConsoleInput/
+Ajouter la dépendance suivante dans le pom :
+
+Attention cette Exemple d'utilisation
+```
+    public Collection<Char> getInput() {
+        try {
+            Collection<Char> result = new ArrayList<>();
+            int read = RawConsoleInput.read(false);
+            while (read != -2){
+                result.add(Movement.parseInput(read));
+                read = RawConsoleInput.read(false);
+            }
+            return result;
+        } catch (IOException e) {
+            throw new RuntimeException("Impossible to read from the stdin", e);
+        }
+    }
+```
