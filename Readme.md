@@ -119,6 +119,7 @@ https://maven.apache.org/plugins/maven-shade-plugin/
             </plugin>
 
 ```
+- java -jar la_jar.jar sera suffisant pour démarrer la jar 
 
 Framework pour les test  : 
 
