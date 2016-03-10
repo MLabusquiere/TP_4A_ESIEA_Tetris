@@ -63,15 +63,22 @@ Un readme.md à la racine du repository est attendu contenant :
 ## Liens Utiles
 http://www.source-code.biz/snippets/java/RawConsoleInput/
 Ajouter la dépendance suivante dans le pom :
-
-Attention cette Exemple d'utilisation
 ```
-    public Collection<Char> getInput() {
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>4.2.0</version>
+        </dependency>
+```
+
+Exemple d'utilisation
+```
+    public Collection<Character> getInput() {
         try {
-            Collection<Char> result = new ArrayList<>();
+            Collection<Character> result = new ArrayList<>();
             int read = RawConsoleInput.read(false);
             while (read != -2){
-                result.add(Movement.parseInput(read));
+                result.add((char) read);
                 read = RawConsoleInput.read(false);
             }
             return result;
@@ -82,3 +89,31 @@ Attention cette Exemple d'utilisation
 ```
 
 Attention la classe RawConsoleInput marche mal dans les consoles Eclipse/IntelliJ
+
+
+> Fat Jar (Met les dépendance dans la jar) et Main par defaut : 
+https://maven.apache.org/plugins/maven-shade-plugin/
+Dans le pom.xml de votre projet :
+```
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.3</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>fr.esiea.tetris.MainClass</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+```
