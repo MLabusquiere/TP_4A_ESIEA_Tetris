@@ -80,3 +80,5 @@ Attention cette Exemple d'utilisation
         }
     }
 ```
+
+Attention la classe RawConsoleInput marche mal dans les consoles Eclipse/IntelliJ
