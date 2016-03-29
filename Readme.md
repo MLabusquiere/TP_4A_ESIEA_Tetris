@@ -43,8 +43,8 @@ A priori 50 % TP - 50 % partiel
 
 
 ## Pour rendre son travail :
-- Le travail est à rendre pour le _30 Mars 2016_ .
-- Une extension de temps est ajoutée pour les CFA. Ils pourrons rendre leur TP, le 14 Avril.
+- Le travail est à rendre pour le _Dimanche 3 Avril 2016_ .
+- Une extension de temps est ajoutée pour les CFA. Ils pourront rendre leur TP, le 14 Avril.
 - Il faut envoyer un mail au contacts ci dessous avec le nom de votre binome/trinome et l'adresse github de votre projet
 
 >Utiliser la plateforme github.com (cf : https://guides.github.com/activities/hello-world/) ou bitbucket.org pour rendre le code source
@@ -145,4 +145,4 @@ Framework pour les test  :
         </dependency>
 ```
 - Nous vous invitons fortement à utiliser junit et vous pouvez vous aider des deux autres dépendances pour effectuer vos tests
-- le scope test permet au shade plugin de pas embarquer vos dépendance pour tester qui ne sont pas nécessaire quand votre tetris tournera
+- le scope test permet au shade plugin de ne pas embarquer vos dépendances pour tester qui ne sont pas nécessaire au démarage de votre tetris
